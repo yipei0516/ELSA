@@ -8,9 +8,7 @@ from nets.Transformer import *
 
 
 class AVLTransformer(nn.Module):
-    # the proposed LEAP decoder
     # 這是一個 PyTorch 的 nn.Module，它模擬 Transformer 結構，用事件標籤（label embeddings）去查詢 audio 和 visual 特徵，透過多層 cross-modal attention 對 label embeddings 進行更新。
-    # the proposed LEAP decoder
     def __init__(self, num_inputs, ffn_dim, lv_layer_num=2, la_layer_num=2, dropout=0.2, nhead=8):
         super(AVLTransformer, self).__init__()
         c = copy.deepcopy
@@ -48,7 +46,7 @@ class AVLTransformer(nn.Module):
 
 
 class AVVPNet(nn.Module):
-    # whole backbone for AVVP task: encoder (MM-Pyr) + decoder (LEAP) 
+    # whole backbone for AVVP task: encoder (MM-Pyr) + decoder
     def __init__(self, mmp_head, avl_head, hidden_size, ffn_dim, n_channels, label_dim, lv_layer_num, la_layer_num):
         super(AVVPNet, self).__init__()
 
@@ -82,7 +80,7 @@ class AVVPNet(nn.Module):
         # MM-Pyramid encoder
         v_o, a_o = self.MMP(f_v, f_a) # (b, 10, 512)
 
-        # LEAP decoder
+        # decoder
         lv_f_list, lv_attn_list, la_f_list, la_attn_list = self.AVL(v_o, a_o, f_la, f_lv)
 
         if len(lv_f_list) > 1: 
