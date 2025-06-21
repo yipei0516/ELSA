@@ -1,0 +1,589 @@
+------------------------------
+audio_dir: ../data/feats/vggish/
+video_dir: ../data/feats/res152/
+st_dir: ../data/feats/r2plus1d_18/
+label_train: ../data/AVVP_train.csv
+label_val: ../data/AVVP_val_pd.csv
+label_test: ../data/AVVP_test_pd.csv
+batch_size: 32
+mmp_head: 8
+avl_head: 8
+epochs: 30
+lr: 0.0001
+stepsize: 10
+gamma: 0.1
+model: MMPyr_LEAP_pretrained
+mode: train
+seed: 1
+log_interval: 50
+model_save_dir: ./pretrained_model
+gpu: 0
+levels: 4
+hid_dim: 512
+ffn_dim: 512
+v_pseudo_flag: True
+a_pseudo_flag: True
+temporal_v_loss_flag: True
+temporal_a_loss_flag: True
+loss_temporal_wei: 1.0
+avss_loss_flag: True
+loss_avss_wei: 1.0
+eps: 0.01
+use_pseudo_label: True
+dataset_label_embedding_path: ./glove/6B/300d/llp_label_glove_embeddings.pt
+dataset_word_embed_dim: 300
+lv_layer_num: 2
+la_layer_num: 2
+------------------------------
+[SETTING] v_pseudo_flag = True
+[SETTING] a_pseudo_flag = True
+Train Epoch: 1 [0/10000 (0%)] Loss1: 0.556 Loss2: 0.324 Loss3: 2.123 Loss4: 0.756 Loss5: 0.709 Loss6: 0.1146
+Train Epoch: 1 [1600/10000 (16%)] Loss1: 0.205 Loss2: 0.163 Loss3: 0.905 Loss4: 0.151 Loss5: 0.199 Loss6: 0.0256
+Train Epoch: 1 [3200/10000 (32%)] Loss1: 0.167 Loss2: 0.166 Loss3: 0.865 Loss4: 0.150 Loss5: 0.146 Loss6: 0.0286
+Train Epoch: 1 [4800/10000 (48%)] Loss1: 0.141 Loss2: 0.128 Loss3: 0.925 Loss4: 0.115 Loss5: 0.131 Loss6: 0.0319
+Train Epoch: 1 [6400/10000 (64%)] Loss1: 0.125 Loss2: 0.096 Loss3: 0.803 Loss4: 0.087 Loss5: 0.112 Loss6: 0.0346
+Train Epoch: 1 [8000/10000 (80%)] Loss1: 0.107 Loss2: 0.098 Loss3: 0.663 Loss4: 0.083 Loss5: 0.099 Loss6: 0.0320
+Train Epoch: 1 [9600/10000 (96%)] Loss1: 0.107 Loss2: 0.087 Loss3: 0.582 Loss4: 0.068 Loss5: 0.100 Loss6: 0.0306
+Audio Event Detection Segment-level F1: 41.0
+Visual Event Detection Segment-level F1: 43.1
+Audio-Visual Event Detection Segment-level F1: 37.7
+Segment-levelType@Avg. F1: 40.6
+Segment-level Event@Avg. F1: 40.5
+Audio Event Detection Event-level F1: 36.3
+Visual Event Detection Event-level F1: 41.2
+Audio-Visual Event Detection Event-level F1: 34.4
+Event-level Type@Avg. F1: 37.3
+Event-level Event@Avg. F1: 35.3
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 2 [0/10000 (0%)] Loss1: 0.092 Loss2: 0.075 Loss3: 0.421 Loss4: 0.054 Loss5: 0.077 Loss6: 0.0287
+Train Epoch: 2 [1600/10000 (16%)] Loss1: 0.086 Loss2: 0.064 Loss3: 0.520 Loss4: 0.052 Loss5: 0.082 Loss6: 0.0314
+Train Epoch: 2 [3200/10000 (32%)] Loss1: 0.063 Loss2: 0.047 Loss3: 0.440 Loss4: 0.045 Loss5: 0.062 Loss6: 0.0323
+Train Epoch: 2 [4800/10000 (48%)] Loss1: 0.096 Loss2: 0.051 Loss3: 0.581 Loss4: 0.051 Loss5: 0.089 Loss6: 0.0306
+Train Epoch: 2 [6400/10000 (64%)] Loss1: 0.072 Loss2: 0.049 Loss3: 0.421 Loss4: 0.047 Loss5: 0.074 Loss6: 0.0299
+Train Epoch: 2 [8000/10000 (80%)] Loss1: 0.068 Loss2: 0.050 Loss3: 0.540 Loss4: 0.047 Loss5: 0.066 Loss6: 0.0291
+Train Epoch: 2 [9600/10000 (96%)] Loss1: 0.081 Loss2: 0.056 Loss3: 0.461 Loss4: 0.038 Loss5: 0.070 Loss6: 0.0311
+Audio Event Detection Segment-level F1: 56.6
+Visual Event Detection Segment-level F1: 61.6
+Audio-Visual Event Detection Segment-level F1: 55.3
+Segment-levelType@Avg. F1: 57.9
+Segment-level Event@Avg. F1: 55.9
+Audio Event Detection Event-level F1: 51.2
+Visual Event Detection Event-level F1: 58.1
+Audio-Visual Event Detection Event-level F1: 49.5
+Event-level Type@Avg. F1: 52.9
+Event-level Event@Avg. F1: 50.3
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 3 [0/10000 (0%)] Loss1: 0.060 Loss2: 0.053 Loss3: 0.401 Loss4: 0.047 Loss5: 0.065 Loss6: 0.0251
+Train Epoch: 3 [1600/10000 (16%)] Loss1: 0.076 Loss2: 0.057 Loss3: 0.440 Loss4: 0.047 Loss5: 0.075 Loss6: 0.0299
+Train Epoch: 3 [3200/10000 (32%)] Loss1: 0.058 Loss2: 0.054 Loss3: 0.401 Loss4: 0.048 Loss5: 0.058 Loss6: 0.0335
+Train Epoch: 3 [4800/10000 (48%)] Loss1: 0.050 Loss2: 0.036 Loss3: 0.301 Loss4: 0.033 Loss5: 0.051 Loss6: 0.0243
+Train Epoch: 3 [6400/10000 (64%)] Loss1: 0.060 Loss2: 0.047 Loss3: 0.240 Loss4: 0.039 Loss5: 0.061 Loss6: 0.0297
+Train Epoch: 3 [8000/10000 (80%)] Loss1: 0.064 Loss2: 0.047 Loss3: 0.360 Loss4: 0.043 Loss5: 0.067 Loss6: 0.0315
+Train Epoch: 3 [9600/10000 (96%)] Loss1: 0.059 Loss2: 0.051 Loss3: 0.381 Loss4: 0.038 Loss5: 0.050 Loss6: 0.0281
+Audio Event Detection Segment-level F1: 56.9
+Visual Event Detection Segment-level F1: 63.9
+Audio-Visual Event Detection Segment-level F1: 57.6
+Segment-levelType@Avg. F1: 59.5
+Segment-level Event@Avg. F1: 56.5
+Audio Event Detection Event-level F1: 51.7
+Visual Event Detection Event-level F1: 60.9
+Audio-Visual Event Detection Event-level F1: 52.5
+Event-level Type@Avg. F1: 55.0
+Event-level Event@Avg. F1: 50.9
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 4 [0/10000 (0%)] Loss1: 0.057 Loss2: 0.051 Loss3: 0.361 Loss4: 0.048 Loss5: 0.052 Loss6: 0.0282
+Train Epoch: 4 [1600/10000 (16%)] Loss1: 0.063 Loss2: 0.051 Loss3: 0.381 Loss4: 0.041 Loss5: 0.049 Loss6: 0.0230
+Train Epoch: 4 [3200/10000 (32%)] Loss1: 0.046 Loss2: 0.037 Loss3: 0.300 Loss4: 0.034 Loss5: 0.054 Loss6: 0.0272
+Train Epoch: 4 [4800/10000 (48%)] Loss1: 0.060 Loss2: 0.051 Loss3: 0.362 Loss4: 0.040 Loss5: 0.057 Loss6: 0.0241
+Train Epoch: 4 [6400/10000 (64%)] Loss1: 0.056 Loss2: 0.032 Loss3: 0.241 Loss4: 0.030 Loss5: 0.062 Loss6: 0.0246
+Train Epoch: 4 [8000/10000 (80%)] Loss1: 0.054 Loss2: 0.046 Loss3: 0.421 Loss4: 0.044 Loss5: 0.053 Loss6: 0.0250
+Train Epoch: 4 [9600/10000 (96%)] Loss1: 0.047 Loss2: 0.026 Loss3: 0.240 Loss4: 0.026 Loss5: 0.048 Loss6: 0.0289
+Audio Event Detection Segment-level F1: 61.3
+Visual Event Detection Segment-level F1: 64.9
+Audio-Visual Event Detection Segment-level F1: 58.3
+Segment-levelType@Avg. F1: 61.5
+Segment-level Event@Avg. F1: 60.4
+Audio Event Detection Event-level F1: 55.4
+Visual Event Detection Event-level F1: 61.3
+Audio-Visual Event Detection Event-level F1: 52.9
+Event-level Type@Avg. F1: 56.5
+Event-level Event@Avg. F1: 53.9
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 5 [0/10000 (0%)] Loss1: 0.063 Loss2: 0.049 Loss3: 0.380 Loss4: 0.039 Loss5: 0.057 Loss6: 0.0340
+Train Epoch: 5 [1600/10000 (16%)] Loss1: 0.036 Loss2: 0.021 Loss3: 0.221 Loss4: 0.020 Loss5: 0.040 Loss6: 0.0198
+Train Epoch: 5 [3200/10000 (32%)] Loss1: 0.050 Loss2: 0.026 Loss3: 0.300 Loss4: 0.018 Loss5: 0.039 Loss6: 0.0219
+Train Epoch: 5 [4800/10000 (48%)] Loss1: 0.069 Loss2: 0.035 Loss3: 0.240 Loss4: 0.033 Loss5: 0.058 Loss6: 0.0236
+Train Epoch: 5 [6400/10000 (64%)] Loss1: 0.049 Loss2: 0.025 Loss3: 0.321 Loss4: 0.027 Loss5: 0.051 Loss6: 0.0299
+Train Epoch: 5 [8000/10000 (80%)] Loss1: 0.061 Loss2: 0.032 Loss3: 0.380 Loss4: 0.029 Loss5: 0.058 Loss6: 0.0201
+Train Epoch: 5 [9600/10000 (96%)] Loss1: 0.052 Loss2: 0.038 Loss3: 0.400 Loss4: 0.038 Loss5: 0.058 Loss6: 0.0295
+Audio Event Detection Segment-level F1: 61.3
+Visual Event Detection Segment-level F1: 66.0
+Audio-Visual Event Detection Segment-level F1: 59.8
+Segment-levelType@Avg. F1: 62.4
+Segment-level Event@Avg. F1: 60.4
+Audio Event Detection Event-level F1: 55.4
+Visual Event Detection Event-level F1: 62.3
+Audio-Visual Event Detection Event-level F1: 54.5
+Event-level Type@Avg. F1: 57.4
+Event-level Event@Avg. F1: 53.6
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 6 [0/10000 (0%)] Loss1: 0.037 Loss2: 0.021 Loss3: 0.200 Loss4: 0.027 Loss5: 0.045 Loss6: 0.0290
+Train Epoch: 6 [1600/10000 (16%)] Loss1: 0.054 Loss2: 0.047 Loss3: 0.321 Loss4: 0.033 Loss5: 0.051 Loss6: 0.0256
+Train Epoch: 6 [3200/10000 (32%)] Loss1: 0.025 Loss2: 0.011 Loss3: 0.161 Loss4: 0.011 Loss5: 0.034 Loss6: 0.0201
+Train Epoch: 6 [4800/10000 (48%)] Loss1: 0.030 Loss2: 0.023 Loss3: 0.100 Loss4: 0.029 Loss5: 0.035 Loss6: 0.0185
+Train Epoch: 6 [6400/10000 (64%)] Loss1: 0.030 Loss2: 0.019 Loss3: 0.141 Loss4: 0.022 Loss5: 0.032 Loss6: 0.0216
+Train Epoch: 6 [8000/10000 (80%)] Loss1: 0.030 Loss2: 0.027 Loss3: 0.180 Loss4: 0.028 Loss5: 0.033 Loss6: 0.0304
+Train Epoch: 6 [9600/10000 (96%)] Loss1: 0.059 Loss2: 0.038 Loss3: 0.421 Loss4: 0.040 Loss5: 0.061 Loss6: 0.0211
+Audio Event Detection Segment-level F1: 62.8
+Visual Event Detection Segment-level F1: 65.9
+Audio-Visual Event Detection Segment-level F1: 60.6
+Segment-levelType@Avg. F1: 63.1
+Segment-level Event@Avg. F1: 61.0
+Audio Event Detection Event-level F1: 57.3
+Visual Event Detection Event-level F1: 62.4
+Audio-Visual Event Detection Event-level F1: 54.7
+Event-level Type@Avg. F1: 58.1
+Event-level Event@Avg. F1: 54.9
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 7 [0/10000 (0%)] Loss1: 0.076 Loss2: 0.047 Loss3: 0.500 Loss4: 0.028 Loss5: 0.070 Loss6: 0.0365
+Train Epoch: 7 [1600/10000 (16%)] Loss1: 0.046 Loss2: 0.035 Loss3: 0.301 Loss4: 0.031 Loss5: 0.049 Loss6: 0.0280
+Train Epoch: 7 [3200/10000 (32%)] Loss1: 0.067 Loss2: 0.027 Loss3: 0.461 Loss4: 0.029 Loss5: 0.059 Loss6: 0.0164
+Train Epoch: 7 [4800/10000 (48%)] Loss1: 0.036 Loss2: 0.016 Loss3: 0.201 Loss4: 0.019 Loss5: 0.038 Loss6: 0.0183
+Train Epoch: 7 [6400/10000 (64%)] Loss1: 0.036 Loss2: 0.028 Loss3: 0.200 Loss4: 0.029 Loss5: 0.041 Loss6: 0.0313
+Train Epoch: 7 [8000/10000 (80%)] Loss1: 0.038 Loss2: 0.042 Loss3: 0.161 Loss4: 0.025 Loss5: 0.049 Loss6: 0.0279
+Train Epoch: 7 [9600/10000 (96%)] Loss1: 0.039 Loss2: 0.027 Loss3: 0.220 Loss4: 0.022 Loss5: 0.041 Loss6: 0.0195
+Audio Event Detection Segment-level F1: 63.9
+Visual Event Detection Segment-level F1: 65.6
+Audio-Visual Event Detection Segment-level F1: 61.0
+Segment-levelType@Avg. F1: 63.5
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 57.7
+Visual Event Detection Event-level F1: 62.3
+Audio-Visual Event Detection Event-level F1: 55.0
+Event-level Type@Avg. F1: 58.4
+Event-level Event@Avg. F1: 56.1
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 8 [0/10000 (0%)] Loss1: 0.035 Loss2: 0.024 Loss3: 0.200 Loss4: 0.023 Loss5: 0.039 Loss6: 0.0195
+Train Epoch: 8 [1600/10000 (16%)] Loss1: 0.054 Loss2: 0.036 Loss3: 0.361 Loss4: 0.035 Loss5: 0.056 Loss6: 0.0212
+Train Epoch: 8 [3200/10000 (32%)] Loss1: 0.022 Loss2: 0.014 Loss3: 0.140 Loss4: 0.017 Loss5: 0.028 Loss6: 0.0155
+Train Epoch: 8 [4800/10000 (48%)] Loss1: 0.032 Loss2: 0.015 Loss3: 0.261 Loss4: 0.018 Loss5: 0.033 Loss6: 0.0219
+Train Epoch: 8 [6400/10000 (64%)] Loss1: 0.032 Loss2: 0.019 Loss3: 0.200 Loss4: 0.013 Loss5: 0.034 Loss6: 0.0282
+Train Epoch: 8 [8000/10000 (80%)] Loss1: 0.047 Loss2: 0.023 Loss3: 0.180 Loss4: 0.021 Loss5: 0.049 Loss6: 0.0249
+Train Epoch: 8 [9600/10000 (96%)] Loss1: 0.036 Loss2: 0.025 Loss3: 0.201 Loss4: 0.024 Loss5: 0.042 Loss6: 0.0220
+Audio Event Detection Segment-level F1: 63.8
+Visual Event Detection Segment-level F1: 66.7
+Audio-Visual Event Detection Segment-level F1: 60.2
+Segment-levelType@Avg. F1: 63.6
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 57.6
+Visual Event Detection Event-level F1: 63.5
+Audio-Visual Event Detection Event-level F1: 54.7
+Event-level Type@Avg. F1: 58.6
+Event-level Event@Avg. F1: 55.8
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 9 [0/10000 (0%)] Loss1: 0.052 Loss2: 0.031 Loss3: 0.280 Loss4: 0.031 Loss5: 0.044 Loss6: 0.0171
+Train Epoch: 9 [1600/10000 (16%)] Loss1: 0.032 Loss2: 0.027 Loss3: 0.259 Loss4: 0.020 Loss5: 0.043 Loss6: 0.0230
+Train Epoch: 9 [3200/10000 (32%)] Loss1: 0.016 Loss2: 0.021 Loss3: 0.100 Loss4: 0.022 Loss5: 0.028 Loss6: 0.0205
+Train Epoch: 9 [4800/10000 (48%)] Loss1: 0.030 Loss2: 0.032 Loss3: 0.220 Loss4: 0.022 Loss5: 0.036 Loss6: 0.0201
+Train Epoch: 9 [6400/10000 (64%)] Loss1: 0.016 Loss2: 0.009 Loss3: 0.060 Loss4: 0.012 Loss5: 0.027 Loss6: 0.0160
+Train Epoch: 9 [8000/10000 (80%)] Loss1: 0.060 Loss2: 0.035 Loss3: 0.281 Loss4: 0.027 Loss5: 0.051 Loss6: 0.0275
+Train Epoch: 9 [9600/10000 (96%)] Loss1: 0.055 Loss2: 0.043 Loss3: 0.381 Loss4: 0.037 Loss5: 0.051 Loss6: 0.0225
+Audio Event Detection Segment-level F1: 63.4
+Visual Event Detection Segment-level F1: 66.5
+Audio-Visual Event Detection Segment-level F1: 60.6
+Segment-levelType@Avg. F1: 63.5
+Segment-level Event@Avg. F1: 62.0
+Audio Event Detection Event-level F1: 57.1
+Visual Event Detection Event-level F1: 62.9
+Audio-Visual Event Detection Event-level F1: 54.2
+Event-level Type@Avg. F1: 58.1
+Event-level Event@Avg. F1: 55.2
+Train Epoch: 10 [0/10000 (0%)] Loss1: 0.034 Loss2: 0.021 Loss3: 0.161 Loss4: 0.022 Loss5: 0.045 Loss6: 0.0214
+Train Epoch: 10 [1600/10000 (16%)] Loss1: 0.035 Loss2: 0.019 Loss3: 0.201 Loss4: 0.024 Loss5: 0.046 Loss6: 0.0247
+Train Epoch: 10 [3200/10000 (32%)] Loss1: 0.031 Loss2: 0.038 Loss3: 0.181 Loss4: 0.030 Loss5: 0.036 Loss6: 0.0203
+Train Epoch: 10 [4800/10000 (48%)] Loss1: 0.058 Loss2: 0.027 Loss3: 0.240 Loss4: 0.020 Loss5: 0.043 Loss6: 0.0184
+Train Epoch: 10 [6400/10000 (64%)] Loss1: 0.037 Loss2: 0.027 Loss3: 0.241 Loss4: 0.034 Loss5: 0.037 Loss6: 0.0252
+Train Epoch: 10 [8000/10000 (80%)] Loss1: 0.032 Loss2: 0.024 Loss3: 0.260 Loss4: 0.023 Loss5: 0.042 Loss6: 0.0234
+Train Epoch: 10 [9600/10000 (96%)] Loss1: 0.031 Loss2: 0.023 Loss3: 0.301 Loss4: 0.023 Loss5: 0.037 Loss6: 0.0219
+Audio Event Detection Segment-level F1: 64.0
+Visual Event Detection Segment-level F1: 67.0
+Audio-Visual Event Detection Segment-level F1: 61.5
+Segment-levelType@Avg. F1: 64.2
+Segment-level Event@Avg. F1: 62.5
+Audio Event Detection Event-level F1: 58.3
+Visual Event Detection Event-level F1: 64.1
+Audio-Visual Event Detection Event-level F1: 57.2
+Event-level Type@Avg. F1: 59.9
+Event-level Event@Avg. F1: 56.3
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 11 [0/10000 (0%)] Loss1: 0.038 Loss2: 0.022 Loss3: 0.220 Loss4: 0.021 Loss5: 0.047 Loss6: 0.0223
+Train Epoch: 11 [1600/10000 (16%)] Loss1: 0.021 Loss2: 0.023 Loss3: 0.141 Loss4: 0.022 Loss5: 0.035 Loss6: 0.0202
+Train Epoch: 11 [3200/10000 (32%)] Loss1: 0.033 Loss2: 0.015 Loss3: 0.100 Loss4: 0.014 Loss5: 0.031 Loss6: 0.0139
+Train Epoch: 11 [4800/10000 (48%)] Loss1: 0.013 Loss2: 0.012 Loss3: 0.100 Loss4: 0.015 Loss5: 0.030 Loss6: 0.0176
+Train Epoch: 11 [6400/10000 (64%)] Loss1: 0.014 Loss2: 0.014 Loss3: 0.060 Loss4: 0.014 Loss5: 0.026 Loss6: 0.0201
+Train Epoch: 11 [8000/10000 (80%)] Loss1: 0.017 Loss2: 0.013 Loss3: 0.101 Loss4: 0.018 Loss5: 0.024 Loss6: 0.0188
+Train Epoch: 11 [9600/10000 (96%)] Loss1: 0.018 Loss2: 0.008 Loss3: 0.120 Loss4: 0.014 Loss5: 0.030 Loss6: 0.0177
+Audio Event Detection Segment-level F1: 64.8
+Visual Event Detection Segment-level F1: 68.7
+Audio-Visual Event Detection Segment-level F1: 63.6
+Segment-levelType@Avg. F1: 65.7
+Segment-level Event@Avg. F1: 63.7
+Audio Event Detection Event-level F1: 59.0
+Visual Event Detection Event-level F1: 65.6
+Audio-Visual Event Detection Event-level F1: 58.3
+Event-level Type@Avg. F1: 61.0
+Event-level Event@Avg. F1: 57.4
+>>> model saved at  ./pretrained_model/MMPyr_LEAP_pretrained.pt
+
+
+
+Train Epoch: 12 [0/10000 (0%)] Loss1: 0.023 Loss2: 0.006 Loss3: 0.180 Loss4: 0.014 Loss5: 0.035 Loss6: 0.0223
+Train Epoch: 12 [1600/10000 (16%)] Loss1: 0.014 Loss2: 0.016 Loss3: 0.060 Loss4: 0.021 Loss5: 0.028 Loss6: 0.0191
+Train Epoch: 12 [3200/10000 (32%)] Loss1: 0.013 Loss2: 0.003 Loss3: 0.100 Loss4: 0.012 Loss5: 0.019 Loss6: 0.0156
+Train Epoch: 12 [4800/10000 (48%)] Loss1: 0.031 Loss2: 0.014 Loss3: 0.240 Loss4: 0.012 Loss5: 0.038 Loss6: 0.0184
+Train Epoch: 12 [6400/10000 (64%)] Loss1: 0.022 Loss2: 0.014 Loss3: 0.141 Loss4: 0.012 Loss5: 0.031 Loss6: 0.0161
+Train Epoch: 12 [8000/10000 (80%)] Loss1: 0.032 Loss2: 0.015 Loss3: 0.160 Loss4: 0.015 Loss5: 0.034 Loss6: 0.0127
+Train Epoch: 12 [9600/10000 (96%)] Loss1: 0.021 Loss2: 0.010 Loss3: 0.180 Loss4: 0.018 Loss5: 0.030 Loss6: 0.0240
+Audio Event Detection Segment-level F1: 64.5
+Visual Event Detection Segment-level F1: 68.7
+Audio-Visual Event Detection Segment-level F1: 63.4
+Segment-levelType@Avg. F1: 65.6
+Segment-level Event@Avg. F1: 63.5
+Audio Event Detection Event-level F1: 58.1
+Visual Event Detection Event-level F1: 65.8
+Audio-Visual Event Detection Event-level F1: 57.7
+Event-level Type@Avg. F1: 60.5
+Event-level Event@Avg. F1: 56.7
+Train Epoch: 13 [0/10000 (0%)] Loss1: 0.012 Loss2: 0.006 Loss3: 0.140 Loss4: 0.014 Loss5: 0.022 Loss6: 0.0182
+Train Epoch: 13 [1600/10000 (16%)] Loss1: 0.032 Loss2: 0.012 Loss3: 0.200 Loss4: 0.015 Loss5: 0.032 Loss6: 0.0213
+Train Epoch: 13 [3200/10000 (32%)] Loss1: 0.006 Loss2: 0.007 Loss3: 0.020 Loss4: 0.008 Loss5: 0.027 Loss6: 0.0174
+Train Epoch: 13 [4800/10000 (48%)] Loss1: 0.017 Loss2: 0.006 Loss3: 0.080 Loss4: 0.008 Loss5: 0.032 Loss6: 0.0183
+Train Epoch: 13 [6400/10000 (64%)] Loss1: 0.014 Loss2: 0.004 Loss3: 0.101 Loss4: 0.010 Loss5: 0.026 Loss6: 0.0196
+Train Epoch: 13 [8000/10000 (80%)] Loss1: 0.020 Loss2: 0.005 Loss3: 0.120 Loss4: 0.009 Loss5: 0.024 Loss6: 0.0161
+Train Epoch: 13 [9600/10000 (96%)] Loss1: 0.011 Loss2: 0.006 Loss3: 0.040 Loss4: 0.015 Loss5: 0.022 Loss6: 0.0201
+Audio Event Detection Segment-level F1: 64.0
+Visual Event Detection Segment-level F1: 68.5
+Audio-Visual Event Detection Segment-level F1: 63.1
+Segment-levelType@Avg. F1: 65.2
+Segment-level Event@Avg. F1: 63.1
+Audio Event Detection Event-level F1: 57.8
+Visual Event Detection Event-level F1: 65.4
+Audio-Visual Event Detection Event-level F1: 57.8
+Event-level Type@Avg. F1: 60.3
+Event-level Event@Avg. F1: 56.5
+Train Epoch: 14 [0/10000 (0%)] Loss1: 0.010 Loss2: 0.010 Loss3: 0.060 Loss4: 0.016 Loss5: 0.025 Loss6: 0.0222
+Train Epoch: 14 [1600/10000 (16%)] Loss1: 0.025 Loss2: 0.002 Loss3: 0.101 Loss4: 0.010 Loss5: 0.030 Loss6: 0.0175
+Train Epoch: 14 [3200/10000 (32%)] Loss1: 0.018 Loss2: 0.012 Loss3: 0.160 Loss4: 0.010 Loss5: 0.022 Loss6: 0.0142
+Train Epoch: 14 [4800/10000 (48%)] Loss1: 0.012 Loss2: 0.013 Loss3: 0.060 Loss4: 0.013 Loss5: 0.025 Loss6: 0.0143
+Train Epoch: 14 [6400/10000 (64%)] Loss1: 0.031 Loss2: 0.013 Loss3: 0.180 Loss4: 0.015 Loss5: 0.038 Loss6: 0.0176
+Train Epoch: 14 [8000/10000 (80%)] Loss1: 0.017 Loss2: 0.008 Loss3: 0.181 Loss4: 0.012 Loss5: 0.022 Loss6: 0.0176
+Train Epoch: 14 [9600/10000 (96%)] Loss1: 0.017 Loss2: 0.011 Loss3: 0.140 Loss4: 0.012 Loss5: 0.030 Loss6: 0.0236
+Audio Event Detection Segment-level F1: 64.1
+Visual Event Detection Segment-level F1: 68.6
+Audio-Visual Event Detection Segment-level F1: 63.4
+Segment-levelType@Avg. F1: 65.4
+Segment-level Event@Avg. F1: 63.2
+Audio Event Detection Event-level F1: 58.3
+Visual Event Detection Event-level F1: 65.4
+Audio-Visual Event Detection Event-level F1: 57.7
+Event-level Type@Avg. F1: 60.4
+Event-level Event@Avg. F1: 56.9
+Train Epoch: 15 [0/10000 (0%)] Loss1: 0.013 Loss2: 0.003 Loss3: 0.100 Loss4: 0.015 Loss5: 0.021 Loss6: 0.0206
+Train Epoch: 15 [1600/10000 (16%)] Loss1: 0.013 Loss2: 0.013 Loss3: 0.100 Loss4: 0.012 Loss5: 0.021 Loss6: 0.0191
+Train Epoch: 15 [3200/10000 (32%)] Loss1: 0.010 Loss2: 0.003 Loss3: 0.100 Loss4: 0.017 Loss5: 0.021 Loss6: 0.0203
+Train Epoch: 15 [4800/10000 (48%)] Loss1: 0.021 Loss2: 0.006 Loss3: 0.060 Loss4: 0.014 Loss5: 0.032 Loss6: 0.0182
+Train Epoch: 15 [6400/10000 (64%)] Loss1: 0.010 Loss2: 0.004 Loss3: 0.060 Loss4: 0.017 Loss5: 0.023 Loss6: 0.0236
+Train Epoch: 15 [8000/10000 (80%)] Loss1: 0.016 Loss2: 0.011 Loss3: 0.100 Loss4: 0.018 Loss5: 0.026 Loss6: 0.0240
+Train Epoch: 15 [9600/10000 (96%)] Loss1: 0.014 Loss2: 0.002 Loss3: 0.080 Loss4: 0.008 Loss5: 0.031 Loss6: 0.0229
+Audio Event Detection Segment-level F1: 63.9
+Visual Event Detection Segment-level F1: 67.5
+Audio-Visual Event Detection Segment-level F1: 63.2
+Segment-levelType@Avg. F1: 64.9
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 58.2
+Visual Event Detection Event-level F1: 64.5
+Audio-Visual Event Detection Event-level F1: 57.8
+Event-level Type@Avg. F1: 60.1
+Event-level Event@Avg. F1: 56.5
+Train Epoch: 16 [0/10000 (0%)] Loss1: 0.024 Loss2: 0.006 Loss3: 0.161 Loss4: 0.016 Loss5: 0.029 Loss6: 0.0220
+Train Epoch: 16 [1600/10000 (16%)] Loss1: 0.012 Loss2: 0.001 Loss3: 0.100 Loss4: 0.008 Loss5: 0.021 Loss6: 0.0116
+Train Epoch: 16 [3200/10000 (32%)] Loss1: 0.007 Loss2: 0.007 Loss3: 0.040 Loss4: 0.012 Loss5: 0.025 Loss6: 0.0195
+Train Epoch: 16 [4800/10000 (48%)] Loss1: 0.014 Loss2: 0.008 Loss3: 0.120 Loss4: 0.012 Loss5: 0.031 Loss6: 0.0214
+Train Epoch: 16 [6400/10000 (64%)] Loss1: 0.012 Loss2: 0.001 Loss3: 0.080 Loss4: 0.009 Loss5: 0.024 Loss6: 0.0158
+Train Epoch: 16 [8000/10000 (80%)] Loss1: 0.016 Loss2: 0.005 Loss3: 0.080 Loss4: 0.011 Loss5: 0.024 Loss6: 0.0190
+Train Epoch: 16 [9600/10000 (96%)] Loss1: 0.014 Loss2: 0.015 Loss3: 0.040 Loss4: 0.013 Loss5: 0.023 Loss6: 0.0152
+Audio Event Detection Segment-level F1: 63.9
+Visual Event Detection Segment-level F1: 67.4
+Audio-Visual Event Detection Segment-level F1: 62.5
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.9
+Audio Event Detection Event-level F1: 58.4
+Visual Event Detection Event-level F1: 64.4
+Audio-Visual Event Detection Event-level F1: 56.9
+Event-level Type@Avg. F1: 59.9
+Event-level Event@Avg. F1: 56.7
+Train Epoch: 17 [0/10000 (0%)] Loss1: 0.017 Loss2: 0.005 Loss3: 0.081 Loss4: 0.009 Loss5: 0.024 Loss6: 0.0131
+Train Epoch: 17 [1600/10000 (16%)] Loss1: 0.015 Loss2: 0.003 Loss3: 0.060 Loss4: 0.008 Loss5: 0.021 Loss6: 0.0139
+Train Epoch: 17 [3200/10000 (32%)] Loss1: 0.024 Loss2: 0.007 Loss3: 0.160 Loss4: 0.013 Loss5: 0.031 Loss6: 0.0175
+Train Epoch: 17 [4800/10000 (48%)] Loss1: 0.021 Loss2: 0.005 Loss3: 0.101 Loss4: 0.011 Loss5: 0.022 Loss6: 0.0176
+Train Epoch: 17 [6400/10000 (64%)] Loss1: 0.029 Loss2: 0.012 Loss3: 0.140 Loss4: 0.013 Loss5: 0.033 Loss6: 0.0208
+Train Epoch: 17 [8000/10000 (80%)] Loss1: 0.021 Loss2: 0.005 Loss3: 0.101 Loss4: 0.013 Loss5: 0.031 Loss6: 0.0176
+Train Epoch: 17 [9600/10000 (96%)] Loss1: 0.030 Loss2: 0.013 Loss3: 0.160 Loss4: 0.015 Loss5: 0.033 Loss6: 0.0132
+Audio Event Detection Segment-level F1: 63.5
+Visual Event Detection Segment-level F1: 67.4
+Audio-Visual Event Detection Segment-level F1: 62.4
+Segment-levelType@Avg. F1: 64.5
+Segment-level Event@Avg. F1: 62.7
+Audio Event Detection Event-level F1: 57.6
+Visual Event Detection Event-level F1: 64.6
+Audio-Visual Event Detection Event-level F1: 57.0
+Event-level Type@Avg. F1: 59.7
+Event-level Event@Avg. F1: 56.3
+Train Epoch: 18 [0/10000 (0%)] Loss1: 0.006 Loss2: 0.004 Loss3: 0.040 Loss4: 0.007 Loss5: 0.023 Loss6: 0.0126
+Train Epoch: 18 [1600/10000 (16%)] Loss1: 0.013 Loss2: 0.017 Loss3: 0.140 Loss4: 0.014 Loss5: 0.029 Loss6: 0.0174
+Train Epoch: 18 [3200/10000 (32%)] Loss1: 0.013 Loss2: 0.002 Loss3: 0.100 Loss4: 0.013 Loss5: 0.023 Loss6: 0.0176
+Train Epoch: 18 [4800/10000 (48%)] Loss1: 0.009 Loss2: 0.002 Loss3: 0.080 Loss4: 0.013 Loss5: 0.016 Loss6: 0.0168
+Train Epoch: 18 [6400/10000 (64%)] Loss1: 0.012 Loss2: 0.002 Loss3: 0.040 Loss4: 0.015 Loss5: 0.025 Loss6: 0.0286
+Train Epoch: 18 [8000/10000 (80%)] Loss1: 0.013 Loss2: 0.004 Loss3: 0.140 Loss4: 0.010 Loss5: 0.022 Loss6: 0.0165
+Train Epoch: 18 [9600/10000 (96%)] Loss1: 0.010 Loss2: 0.011 Loss3: 0.080 Loss4: 0.012 Loss5: 0.023 Loss6: 0.0169
+Audio Event Detection Segment-level F1: 64.0
+Visual Event Detection Segment-level F1: 67.8
+Audio-Visual Event Detection Segment-level F1: 63.1
+Segment-levelType@Avg. F1: 65.0
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 57.8
+Visual Event Detection Event-level F1: 64.5
+Audio-Visual Event Detection Event-level F1: 57.3
+Event-level Type@Avg. F1: 59.9
+Event-level Event@Avg. F1: 56.1
+Train Epoch: 19 [0/10000 (0%)] Loss1: 0.015 Loss2: 0.005 Loss3: 0.120 Loss4: 0.010 Loss5: 0.023 Loss6: 0.0156
+Train Epoch: 19 [1600/10000 (16%)] Loss1: 0.010 Loss2: 0.003 Loss3: 0.080 Loss4: 0.010 Loss5: 0.019 Loss6: 0.0175
+Train Epoch: 19 [3200/10000 (32%)] Loss1: 0.018 Loss2: 0.008 Loss3: 0.120 Loss4: 0.015 Loss5: 0.031 Loss6: 0.0228
+Train Epoch: 19 [4800/10000 (48%)] Loss1: 0.022 Loss2: 0.010 Loss3: 0.140 Loss4: 0.015 Loss5: 0.034 Loss6: 0.0301
+Train Epoch: 19 [6400/10000 (64%)] Loss1: 0.007 Loss2: 0.005 Loss3: 0.020 Loss4: 0.009 Loss5: 0.023 Loss6: 0.0194
+Train Epoch: 19 [8000/10000 (80%)] Loss1: 0.021 Loss2: 0.008 Loss3: 0.220 Loss4: 0.012 Loss5: 0.030 Loss6: 0.0173
+Train Epoch: 19 [9600/10000 (96%)] Loss1: 0.015 Loss2: 0.017 Loss3: 0.060 Loss4: 0.014 Loss5: 0.028 Loss6: 0.0172
+Audio Event Detection Segment-level F1: 64.0
+Visual Event Detection Segment-level F1: 68.5
+Audio-Visual Event Detection Segment-level F1: 63.3
+Segment-levelType@Avg. F1: 65.3
+Segment-level Event@Avg. F1: 63.1
+Audio Event Detection Event-level F1: 58.1
+Visual Event Detection Event-level F1: 65.3
+Audio-Visual Event Detection Event-level F1: 57.9
+Event-level Type@Avg. F1: 60.4
+Event-level Event@Avg. F1: 56.6
+Train Epoch: 20 [0/10000 (0%)] Loss1: 0.014 Loss2: 0.006 Loss3: 0.101 Loss4: 0.010 Loss5: 0.026 Loss6: 0.0110
+Train Epoch: 20 [1600/10000 (16%)] Loss1: 0.014 Loss2: 0.002 Loss3: 0.121 Loss4: 0.015 Loss5: 0.023 Loss6: 0.0228
+Train Epoch: 20 [3200/10000 (32%)] Loss1: 0.015 Loss2: 0.003 Loss3: 0.100 Loss4: 0.010 Loss5: 0.021 Loss6: 0.0187
+Train Epoch: 20 [4800/10000 (48%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.040 Loss4: 0.009 Loss5: 0.022 Loss6: 0.0146
+Train Epoch: 20 [6400/10000 (64%)] Loss1: 0.023 Loss2: 0.005 Loss3: 0.120 Loss4: 0.011 Loss5: 0.036 Loss6: 0.0179
+Train Epoch: 20 [8000/10000 (80%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.020 Loss4: 0.012 Loss5: 0.023 Loss6: 0.0176
+Train Epoch: 20 [9600/10000 (96%)] Loss1: 0.011 Loss2: 0.003 Loss3: 0.080 Loss4: 0.013 Loss5: 0.025 Loss6: 0.0183
+Audio Event Detection Segment-level F1: 63.7
+Visual Event Detection Segment-level F1: 67.7
+Audio-Visual Event Detection Segment-level F1: 62.9
+Segment-levelType@Avg. F1: 64.8
+Segment-level Event@Avg. F1: 62.7
+Audio Event Detection Event-level F1: 57.8
+Visual Event Detection Event-level F1: 64.4
+Audio-Visual Event Detection Event-level F1: 57.1
+Event-level Type@Avg. F1: 59.8
+Event-level Event@Avg. F1: 56.3
+Train Epoch: 21 [0/10000 (0%)] Loss1: 0.009 Loss2: 0.004 Loss3: 0.060 Loss4: 0.012 Loss5: 0.025 Loss6: 0.0148
+Train Epoch: 21 [1600/10000 (16%)] Loss1: 0.015 Loss2: 0.004 Loss3: 0.060 Loss4: 0.018 Loss5: 0.028 Loss6: 0.0174
+Train Epoch: 21 [3200/10000 (32%)] Loss1: 0.021 Loss2: 0.005 Loss3: 0.140 Loss4: 0.018 Loss5: 0.026 Loss6: 0.0171
+Train Epoch: 21 [4800/10000 (48%)] Loss1: 0.011 Loss2: 0.004 Loss3: 0.060 Loss4: 0.008 Loss5: 0.029 Loss6: 0.0158
+Train Epoch: 21 [6400/10000 (64%)] Loss1: 0.008 Loss2: 0.005 Loss3: 0.040 Loss4: 0.013 Loss5: 0.023 Loss6: 0.0187
+Train Epoch: 21 [8000/10000 (80%)] Loss1: 0.003 Loss2: 0.001 Loss3: 0.020 Loss4: 0.008 Loss5: 0.020 Loss6: 0.0168
+Train Epoch: 21 [9600/10000 (96%)] Loss1: 0.007 Loss2: 0.002 Loss3: 0.020 Loss4: 0.012 Loss5: 0.026 Loss6: 0.0204
+Audio Event Detection Segment-level F1: 63.9
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 63.1
+Segment-levelType@Avg. F1: 64.7
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 57.8
+Visual Event Detection Event-level F1: 64.1
+Audio-Visual Event Detection Event-level F1: 57.4
+Event-level Type@Avg. F1: 59.7
+Event-level Event@Avg. F1: 56.3
+Train Epoch: 22 [0/10000 (0%)] Loss1: 0.006 Loss2: 0.002 Loss3: 0.040 Loss4: 0.005 Loss5: 0.016 Loss6: 0.0116
+Train Epoch: 22 [1600/10000 (16%)] Loss1: 0.010 Loss2: 0.003 Loss3: 0.120 Loss4: 0.008 Loss5: 0.024 Loss6: 0.0137
+Train Epoch: 22 [3200/10000 (32%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.080 Loss4: 0.008 Loss5: 0.025 Loss6: 0.0184
+Train Epoch: 22 [4800/10000 (48%)] Loss1: 0.008 Loss2: 0.014 Loss3: 0.060 Loss4: 0.023 Loss5: 0.026 Loss6: 0.0195
+Train Epoch: 22 [6400/10000 (64%)] Loss1: 0.013 Loss2: 0.001 Loss3: 0.080 Loss4: 0.008 Loss5: 0.027 Loss6: 0.0175
+Train Epoch: 22 [8000/10000 (80%)] Loss1: 0.014 Loss2: 0.002 Loss3: 0.100 Loss4: 0.015 Loss5: 0.020 Loss6: 0.0192
+Train Epoch: 22 [9600/10000 (96%)] Loss1: 0.016 Loss2: 0.004 Loss3: 0.100 Loss4: 0.009 Loss5: 0.027 Loss6: 0.0107
+Audio Event Detection Segment-level F1: 63.8
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 62.9
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.7
+Audio Event Detection Event-level F1: 57.6
+Visual Event Detection Event-level F1: 64.2
+Audio-Visual Event Detection Event-level F1: 57.3
+Event-level Type@Avg. F1: 59.7
+Event-level Event@Avg. F1: 56.0
+Train Epoch: 23 [0/10000 (0%)] Loss1: 0.005 Loss2: 0.003 Loss3: 0.020 Loss4: 0.013 Loss5: 0.021 Loss6: 0.0171
+Train Epoch: 23 [1600/10000 (16%)] Loss1: 0.016 Loss2: 0.003 Loss3: 0.060 Loss4: 0.007 Loss5: 0.028 Loss6: 0.0151
+Train Epoch: 23 [3200/10000 (32%)] Loss1: 0.016 Loss2: 0.002 Loss3: 0.040 Loss4: 0.013 Loss5: 0.021 Loss6: 0.0172
+Train Epoch: 23 [4800/10000 (48%)] Loss1: 0.010 Loss2: 0.003 Loss3: 0.020 Loss4: 0.011 Loss5: 0.017 Loss6: 0.0130
+Train Epoch: 23 [6400/10000 (64%)] Loss1: 0.005 Loss2: 0.006 Loss3: 0.020 Loss4: 0.013 Loss5: 0.020 Loss6: 0.0143
+Train Epoch: 23 [8000/10000 (80%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.080 Loss4: 0.009 Loss5: 0.023 Loss6: 0.0195
+Train Epoch: 23 [9600/10000 (96%)] Loss1: 0.017 Loss2: 0.000 Loss3: 0.040 Loss4: 0.005 Loss5: 0.017 Loss6: 0.0099
+Audio Event Detection Segment-level F1: 63.7
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 62.8
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.6
+Audio Event Detection Event-level F1: 57.8
+Visual Event Detection Event-level F1: 63.9
+Audio-Visual Event Detection Event-level F1: 57.2
+Event-level Type@Avg. F1: 59.6
+Event-level Event@Avg. F1: 56.0
+Train Epoch: 24 [0/10000 (0%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.080 Loss4: 0.008 Loss5: 0.022 Loss6: 0.0187
+Train Epoch: 24 [1600/10000 (16%)] Loss1: 0.008 Loss2: 0.003 Loss3: 0.081 Loss4: 0.011 Loss5: 0.019 Loss6: 0.0167
+Train Epoch: 24 [3200/10000 (32%)] Loss1: 0.006 Loss2: 0.001 Loss3: 0.040 Loss4: 0.010 Loss5: 0.017 Loss6: 0.0140
+Train Epoch: 24 [4800/10000 (48%)] Loss1: 0.008 Loss2: 0.000 Loss3: 0.060 Loss4: 0.009 Loss5: 0.020 Loss6: 0.0147
+Train Epoch: 24 [6400/10000 (64%)] Loss1: 0.025 Loss2: 0.002 Loss3: 0.100 Loss4: 0.012 Loss5: 0.026 Loss6: 0.0114
+Train Epoch: 24 [8000/10000 (80%)] Loss1: 0.009 Loss2: 0.001 Loss3: 0.060 Loss4: 0.010 Loss5: 0.020 Loss6: 0.0158
+Train Epoch: 24 [9600/10000 (96%)] Loss1: 0.006 Loss2: 0.002 Loss3: 0.080 Loss4: 0.009 Loss5: 0.019 Loss6: 0.0112
+Audio Event Detection Segment-level F1: 63.7
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 62.6
+Segment-levelType@Avg. F1: 64.5
+Segment-level Event@Avg. F1: 62.7
+Audio Event Detection Event-level F1: 57.7
+Visual Event Detection Event-level F1: 63.9
+Audio-Visual Event Detection Event-level F1: 56.9
+Event-level Type@Avg. F1: 59.5
+Event-level Event@Avg. F1: 56.0
+Train Epoch: 25 [0/10000 (0%)] Loss1: 0.013 Loss2: 0.007 Loss3: 0.080 Loss4: 0.019 Loss5: 0.029 Loss6: 0.0168
+Train Epoch: 25 [1600/10000 (16%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.040 Loss4: 0.008 Loss5: 0.019 Loss6: 0.0117
+Train Epoch: 25 [3200/10000 (32%)] Loss1: 0.006 Loss2: 0.003 Loss3: 0.020 Loss4: 0.015 Loss5: 0.020 Loss6: 0.0185
+Train Epoch: 25 [4800/10000 (48%)] Loss1: 0.018 Loss2: 0.007 Loss3: 0.060 Loss4: 0.018 Loss5: 0.025 Loss6: 0.0159
+Train Epoch: 25 [6400/10000 (64%)] Loss1: 0.014 Loss2: 0.011 Loss3: 0.060 Loss4: 0.014 Loss5: 0.026 Loss6: 0.0156
+Train Epoch: 25 [8000/10000 (80%)] Loss1: 0.005 Loss2: 0.004 Loss3: 0.020 Loss4: 0.014 Loss5: 0.017 Loss6: 0.0155
+Train Epoch: 25 [9600/10000 (96%)] Loss1: 0.005 Loss2: 0.002 Loss3: 0.040 Loss4: 0.010 Loss5: 0.019 Loss6: 0.0124
+Audio Event Detection Segment-level F1: 63.7
+Visual Event Detection Segment-level F1: 67.3
+Audio-Visual Event Detection Segment-level F1: 62.8
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.8
+Audio Event Detection Event-level F1: 57.3
+Visual Event Detection Event-level F1: 64.0
+Audio-Visual Event Detection Event-level F1: 56.9
+Event-level Type@Avg. F1: 59.4
+Event-level Event@Avg. F1: 55.8
+Train Epoch: 26 [0/10000 (0%)] Loss1: 0.004 Loss2: 0.003 Loss3: 0.020 Loss4: 0.013 Loss5: 0.019 Loss6: 0.0198
+Train Epoch: 26 [1600/10000 (16%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.040 Loss4: 0.011 Loss5: 0.023 Loss6: 0.0144
+Train Epoch: 26 [3200/10000 (32%)] Loss1: 0.009 Loss2: 0.001 Loss3: 0.020 Loss4: 0.011 Loss5: 0.027 Loss6: 0.0160
+Train Epoch: 26 [4800/10000 (48%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.080 Loss4: 0.009 Loss5: 0.019 Loss6: 0.0165
+Train Epoch: 26 [6400/10000 (64%)] Loss1: 0.006 Loss2: 0.002 Loss3: 0.040 Loss4: 0.010 Loss5: 0.019 Loss6: 0.0143
+Train Epoch: 26 [8000/10000 (80%)] Loss1: 0.021 Loss2: 0.002 Loss3: 0.161 Loss4: 0.011 Loss5: 0.034 Loss6: 0.0159
+Train Epoch: 26 [9600/10000 (96%)] Loss1: 0.010 Loss2: 0.000 Loss3: 0.040 Loss4: 0.008 Loss5: 0.015 Loss6: 0.0131
+Audio Event Detection Segment-level F1: 63.6
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 62.7
+Segment-levelType@Avg. F1: 64.5
+Segment-level Event@Avg. F1: 62.6
+Audio Event Detection Event-level F1: 57.6
+Visual Event Detection Event-level F1: 63.9
+Audio-Visual Event Detection Event-level F1: 56.9
+Event-level Type@Avg. F1: 59.5
+Event-level Event@Avg. F1: 55.9
+Train Epoch: 27 [0/10000 (0%)] Loss1: 0.010 Loss2: 0.008 Loss3: 0.020 Loss4: 0.008 Loss5: 0.016 Loss6: 0.0141
+Train Epoch: 27 [1600/10000 (16%)] Loss1: 0.007 Loss2: 0.003 Loss3: 0.020 Loss4: 0.009 Loss5: 0.018 Loss6: 0.0162
+Train Epoch: 27 [3200/10000 (32%)] Loss1: 0.005 Loss2: 0.003 Loss3: 0.040 Loss4: 0.009 Loss5: 0.021 Loss6: 0.0177
+Train Epoch: 27 [4800/10000 (48%)] Loss1: 0.006 Loss2: 0.002 Loss3: 0.020 Loss4: 0.013 Loss5: 0.026 Loss6: 0.0167
+Train Epoch: 27 [6400/10000 (64%)] Loss1: 0.007 Loss2: 0.003 Loss3: 0.000 Loss4: 0.007 Loss5: 0.017 Loss6: 0.0146
+Train Epoch: 27 [8000/10000 (80%)] Loss1: 0.019 Loss2: 0.005 Loss3: 0.080 Loss4: 0.012 Loss5: 0.025 Loss6: 0.0173
+Train Epoch: 27 [9600/10000 (96%)] Loss1: 0.005 Loss2: 0.000 Loss3: 0.040 Loss4: 0.007 Loss5: 0.027 Loss6: 0.0162
+Audio Event Detection Segment-level F1: 63.5
+Visual Event Detection Segment-level F1: 67.5
+Audio-Visual Event Detection Segment-level F1: 63.2
+Segment-levelType@Avg. F1: 64.7
+Segment-level Event@Avg. F1: 62.6
+Audio Event Detection Event-level F1: 57.4
+Visual Event Detection Event-level F1: 64.2
+Audio-Visual Event Detection Event-level F1: 57.4
+Event-level Type@Avg. F1: 59.7
+Event-level Event@Avg. F1: 55.9
+Train Epoch: 28 [0/10000 (0%)] Loss1: 0.011 Loss2: 0.001 Loss3: 0.060 Loss4: 0.008 Loss5: 0.020 Loss6: 0.0142
+Train Epoch: 28 [1600/10000 (16%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.040 Loss4: 0.010 Loss5: 0.021 Loss6: 0.0153
+Train Epoch: 28 [3200/10000 (32%)] Loss1: 0.009 Loss2: 0.001 Loss3: 0.060 Loss4: 0.013 Loss5: 0.026 Loss6: 0.0199
+Train Epoch: 28 [4800/10000 (48%)] Loss1: 0.011 Loss2: 0.002 Loss3: 0.100 Loss4: 0.009 Loss5: 0.029 Loss6: 0.0181
+Train Epoch: 28 [6400/10000 (64%)] Loss1: 0.009 Loss2: 0.003 Loss3: 0.040 Loss4: 0.016 Loss5: 0.027 Loss6: 0.0197
+Train Epoch: 28 [8000/10000 (80%)] Loss1: 0.018 Loss2: 0.001 Loss3: 0.100 Loss4: 0.005 Loss5: 0.026 Loss6: 0.0148
+Train Epoch: 28 [9600/10000 (96%)] Loss1: 0.007 Loss2: 0.010 Loss3: 0.040 Loss4: 0.012 Loss5: 0.025 Loss6: 0.0192
+Audio Event Detection Segment-level F1: 63.5
+Visual Event Detection Segment-level F1: 67.4
+Audio-Visual Event Detection Segment-level F1: 63.0
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.6
+Audio Event Detection Event-level F1: 57.3
+Visual Event Detection Event-level F1: 64.3
+Audio-Visual Event Detection Event-level F1: 57.3
+Event-level Type@Avg. F1: 59.7
+Event-level Event@Avg. F1: 56.0
+Train Epoch: 29 [0/10000 (0%)] Loss1: 0.012 Loss2: 0.002 Loss3: 0.100 Loss4: 0.015 Loss5: 0.024 Loss6: 0.0154
+Train Epoch: 29 [1600/10000 (16%)] Loss1: 0.015 Loss2: 0.002 Loss3: 0.120 Loss4: 0.011 Loss5: 0.025 Loss6: 0.0179
+Train Epoch: 29 [3200/10000 (32%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.040 Loss4: 0.011 Loss5: 0.022 Loss6: 0.0223
+Train Epoch: 29 [4800/10000 (48%)] Loss1: 0.024 Loss2: 0.004 Loss3: 0.080 Loss4: 0.015 Loss5: 0.025 Loss6: 0.0199
+Train Epoch: 29 [6400/10000 (64%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.080 Loss4: 0.011 Loss5: 0.020 Loss6: 0.0144
+Train Epoch: 29 [8000/10000 (80%)] Loss1: 0.010 Loss2: 0.001 Loss3: 0.120 Loss4: 0.007 Loss5: 0.027 Loss6: 0.0160
+Train Epoch: 29 [9600/10000 (96%)] Loss1: 0.014 Loss2: 0.001 Loss3: 0.161 Loss4: 0.008 Loss5: 0.024 Loss6: 0.0166
+Audio Event Detection Segment-level F1: 63.6
+Visual Event Detection Segment-level F1: 67.6
+Audio-Visual Event Detection Segment-level F1: 63.2
+Segment-levelType@Avg. F1: 64.8
+Segment-level Event@Avg. F1: 62.7
+Audio Event Detection Event-level F1: 57.3
+Visual Event Detection Event-level F1: 64.2
+Audio-Visual Event Detection Event-level F1: 57.2
+Event-level Type@Avg. F1: 59.6
+Event-level Event@Avg. F1: 55.9
+Train Epoch: 30 [0/10000 (0%)] Loss1: 0.006 Loss2: 0.005 Loss3: 0.100 Loss4: 0.008 Loss5: 0.021 Loss6: 0.0151
+Train Epoch: 30 [1600/10000 (16%)] Loss1: 0.008 Loss2: 0.001 Loss3: 0.040 Loss4: 0.007 Loss5: 0.021 Loss6: 0.0120
+Train Epoch: 30 [3200/10000 (32%)] Loss1: 0.003 Loss2: 0.000 Loss3: 0.000 Loss4: 0.013 Loss5: 0.018 Loss6: 0.0181
+Train Epoch: 30 [4800/10000 (48%)] Loss1: 0.013 Loss2: 0.000 Loss3: 0.080 Loss4: 0.007 Loss5: 0.023 Loss6: 0.0162
+Train Epoch: 30 [6400/10000 (64%)] Loss1: 0.010 Loss2: 0.012 Loss3: 0.060 Loss4: 0.012 Loss5: 0.024 Loss6: 0.0159
+Train Epoch: 30 [8000/10000 (80%)] Loss1: 0.025 Loss2: 0.005 Loss3: 0.140 Loss4: 0.010 Loss5: 0.037 Loss6: 0.0209
+Train Epoch: 30 [9600/10000 (96%)] Loss1: 0.016 Loss2: 0.004 Loss3: 0.101 Loss4: 0.009 Loss5: 0.027 Loss6: 0.0147
+Audio Event Detection Segment-level F1: 63.4
+Visual Event Detection Segment-level F1: 67.2
+Audio-Visual Event Detection Segment-level F1: 63.1
+Segment-levelType@Avg. F1: 64.6
+Segment-level Event@Avg. F1: 62.5
+Audio Event Detection Event-level F1: 57.2
+Visual Event Detection Event-level F1: 63.8
+Audio-Visual Event Detection Event-level F1: 57.1
+Event-level Type@Avg. F1: 59.4
+Event-level Event@Avg. F1: 55.8

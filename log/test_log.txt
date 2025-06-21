@@ -1,0 +1,49 @@
+------------------------------
+audio_dir: ../data/feats/vggish/
+video_dir: ../data/feats/res152/
+st_dir: ../data/feats/r2plus1d_18/
+label_train: ../data/AVVP_train.csv
+label_val: ../data/AVVP_val_pd.csv
+label_test: ../data/AVVP_test_pd.csv
+batch_size: 32
+mmp_head: 8
+avl_head: 8
+epochs: 30
+lr: 0.0001
+stepsize: 10
+gamma: 0.1
+model: MMPyr_LEAP_pretrained
+mode: test
+seed: 1
+log_interval: 50
+model_save_dir: ./pretrained_model
+gpu: 0
+levels: 4
+hid_dim: 512
+ffn_dim: 512
+v_pseudo_flag: True
+a_pseudo_flag: True
+temporal_v_loss_flag: False
+temporal_a_loss_flag: False
+loss_temporal_wei: 0.5
+avss_loss_flag: False
+loss_avss_wei: 0.5
+eps: 0.01
+use_pseudo_label: False
+dataset_label_embedding_path: ./glove/6B/300d/llp_label_glove_embeddings.pt
+dataset_word_embed_dim: 300
+lv_layer_num: 2
+la_layer_num: 2
+------------------------------
+[SETTING] v_pseudo_flag = True
+[SETTING] a_pseudo_flag = True
+Audio Event Detection Segment-level F1: 64.1
+Visual Event Detection Segment-level F1: 66.4
+Audio-Visual Event Detection Segment-level F1: 59.7
+Segment-levelType@Avg. F1: 63.4
+Segment-level Event@Avg. F1: 63.0
+Audio Event Detection Event-level F1: 58.2
+Visual Event Detection Event-level F1: 63.4
+Audio-Visual Event Detection Event-level F1: 54.2
+Event-level Type@Avg. F1: 58.6
+Event-level Event@Avg. F1: 56.2
